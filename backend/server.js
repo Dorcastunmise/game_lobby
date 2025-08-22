@@ -36,6 +36,10 @@ const leaderboardRoutes = require("./routes/leaderboardRoutes");
 app.use("/api/auth", authRoutes);
 app.use("/api/session", sessionRoutes);
 app.use("/api/leaderboard", leaderboardRoutes);
+app.use(cors({
+  origin: "https://Dorcastunmise.github.io",
+  credentials: true
+}));
 
 // Test route
 app.get("/", (req, res) => res.send("Game Lobby API is running..."));
