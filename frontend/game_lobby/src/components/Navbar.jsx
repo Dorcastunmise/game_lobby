@@ -8,10 +8,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
 
-  const handleLogout = () => {
-    localStorage.removeItem("username");
-    navigate("/login");
-  };
+const handleLogout = async () => {
+  const sessionId = localStorage.getItem("sessionId");
+  if (sessionId) await leaveSession(sessionId); // closes session in DB
+  navigate("/login");
+};
+
 
   // Determine which link to show when not logged in
   let authLink = null;

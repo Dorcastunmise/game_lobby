@@ -4,6 +4,10 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const mysql = require("mysql2/promise");
 
+const authRoutes = require("./routes/authRoutes");
+const sessionRoutes = require("./routes/sessionRoutes");
+const leaderboardRoutes = require("./routes/leaderboardRoutes");
+
 // Load .env variables
 dotenv.config();
 
@@ -12,7 +16,7 @@ app.use(express.json());
 
 // CORS configuration
 app.use(cors({
-  origin: ["https://dorcastunmise.github.io", "https://dorcastunmise.github.io/"], // both forms
+  origin: ["https://dorcastunmise.github.io", "http://localhost:5173"], // both forms
   credentials: true
 }));
 
@@ -25,10 +29,10 @@ let db;
 (async () => {
   try {
     db = await mysql.createConnection({
-      host: process.env.DB_HOST || "sql7.freesqldatabase.com",
-      user: process.env.DB_USER || "sql7795772",
-      password: process.env.DB_PASS || "7HeqCtsylt",
-      database: process.env.DB_NAME || "sql7795772"
+      host: process.env.DB_HOST || "localhost",
+      user: process.env.DB_USER || "root",
+      password: process.env.DB_PASS || "",
+      database: process.env.DB_NAME || "game_lobby"
     });
     console.log("MySQL Connected");
   } catch (err) {
@@ -41,11 +45,6 @@ app.use((req, res, next) => {
   req.db = db;
   next();
 });
-
-// Routes (no changes, keep /api prefix)
-const authRoutes = require("./routes/authRoutes");
-const sessionRoutes = require("./routes/sessionRoutes");
-const leaderboardRoutes = require("./routes/leaderboardRoutes");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/session", sessionRoutes);

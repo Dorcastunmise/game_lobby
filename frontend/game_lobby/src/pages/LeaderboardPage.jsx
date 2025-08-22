@@ -5,8 +5,14 @@ export default function LeaderboardPage() {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    fetchTopPlayers().then(setPlayers).catch(console.error);
+    fetchTopPlayers()
+      .then(data => {
+        console.log("API leaderboard data:", data);
+        setPlayers(data);
+      })
+      .catch(console.error);
   }, []);
+
 
   return (
         <div className="leaderboard-container">

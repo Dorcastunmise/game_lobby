@@ -45,7 +45,7 @@ export default function GamePage() {
 
   return (
     <div className="game-container">
-      <h1>🎲 Select a number (1-9)</h1>
+      <h1>🎲 <br />Choose your lucky number (1-9)! <br /> One shot only!</h1>
       <div className="countdown">Time Left: {timeLeft}s</div>
       <div className="number-grid">
         {[1,2,3,4,5,6,7,8,9].map(n => (
