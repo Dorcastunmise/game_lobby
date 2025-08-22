@@ -1,8 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: import.meta.env.VITE_API_URL || "https://game-lobby-2whu.onrender.com/",
 });
+
+
 
 
 // Automatically attach JWT token to all requests
