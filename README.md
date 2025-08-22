@@ -144,12 +144,4 @@ MIT License © 2025
 
 ---
 
-## 👾 Game Emojis & Icons
-
-- 🎲 Dice / Game  
-- 🎮 Game Lobby Logo  
-- 🏆 Winner / Leaderboard  
-- 🕹️ Number selection / buttons  
-- ⏱️ Countdown timer  
-
 Made with ❤️ by [Oluwatunmise]
