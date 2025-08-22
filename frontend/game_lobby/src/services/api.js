@@ -4,9 +4,6 @@ const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "https://game-lobby-2whu.onrender.com/api",
 });
 
-
-
-
 // Automatically attach JWT token to all requests
 api.interceptors.request.use(config => {
   const token = localStorage.getItem("token");
