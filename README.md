@@ -1,4 +1,4 @@
-<pre><code>
+
 # 🎮 Number Guessing Game Lobby
 
 A fun and interactive web-based game where users can join sessions, pick numbers, and compete to guess the winning number. Built with React.js frontend and Node.js/Express backend with MySQL database.  
@@ -153,4 +153,3 @@ MIT License © 2025
 - ⏱️ Countdown timer  
 
 Made with ❤️ by [Oluwatunmise]
-</code></pre>
