@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
+import { leaveSession } from "../services/api.js";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -8,19 +9,22 @@ export default function Navbar() {
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
 
-const handleLogout = async () => {
-  const sessionId = localStorage.getItem("sessionId");
-  if (sessionId) await leaveSession(sessionId); // closes session in DB
-  navigate("/login");
-};
+  const handleLogout = async () => {
+    const sessionId = localStorage.getItem("sessionId");
+    if (sessionId) await leaveSession(sessionId); // close session in DB
+    localStorage.removeItem("username");
+    localStorage.removeItem("token");
+    localStorage.removeItem("sessionId");
+    navigate("/auth");
+  };
 
-
-  // Determine which link to show when not logged in
-  let authLink = null;
-  if (!username) {
-    if (location.pathname === "/auth") authLink = <Link to="/register">Register</Link>;
-    else if (location.pathname === "/register") authLink = <Link to="/auth">Login</Link>;
-  }
+  // Show auth links properly
+  let authLinks = (
+    <>
+      {location.pathname !== "/auth" && <Link to="/auth">Login</Link>}
+      {location.pathname !== "/register" && <Link to="/register">Register</Link>}
+    </>
+  );
 
   return (
     <nav>
@@ -42,7 +46,7 @@ const handleLogout = async () => {
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
-          authLink
+          authLinks
         )}
       </div>
     </nav>
