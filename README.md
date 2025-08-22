@@ -152,5 +152,5 @@ MIT License © 2025
 - 🕹️ Number selection / buttons  
 - ⏱️ Countdown timer  
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Oluwatunmise]
 </code></pre>
