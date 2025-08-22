@@ -1,7 +1,9 @@
 
 # 🎮 Number Guessing Game Lobby
 
-<video src="https://github.com/Dorcastunmise/game_lobby/public/Game_Lobby.mp4" width="300" />
+https://github.com/user-attachments/assets/07e68b2e-7758-4b82-bfd7-43c5916031da
+
+
 
 A fun and interactive web-based game where users can join sessions, pick numbers, and compete to guess the winning number. Built with React.js frontend and Node.js/Express backend with MySQL database.  
 
