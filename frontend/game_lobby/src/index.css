@@ -1,0 +1,314 @@
+/* ---------------- Global ---------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* ---------------- Navbar ---------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #334155;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  color: #f8fafc;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center; /* vertically centers the image and text */
+  font-size: 1.8rem; /* adjust as needed */
+  font-weight: bold;
+  color: #aca2c2; /* text color */
+}
+
+.navbar-logo img {
+  width: 40px;      /* size of the logo */
+  height: 40px;     /* keep aspect ratio */
+  margin-right: 10px; /* spacing between image and text */
+  border-radius: 5px; /* optional: rounded corners */
+  object-fit: cover;
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a,
+.nav-links button {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #f8fafc;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background-color: #4f46e5;
+  cursor: pointer;
+}
+
+.nav-links button {
+  background-color: #ef4444;
+  border: none;
+}
+
+/* Mobile toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #f8fafc;
+  cursor: pointer;
+}
+
+/* ---------------- Containers ---------------- */
+.auth-container,
+.home-container,
+.game-container {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background-color: #1e293b;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* ---------------- Headings & Text ---------------- */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f8fafc;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+}
+
+/* ---------------- Inputs ---------------- */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #334155;
+  color: #f8fafc;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px #4f46e5;
+}
+
+/* ---------------- Buttons ---------------- */
+button {
+  padding: 0.8rem 1.8rem;
+  margin: 0.3rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #4f46e5;
+  color: #f8fafc;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #64748b;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------------- Register Link ---------------- */
+.register-text {
+  font-size: 14px;
+  color: #666; /* matches other register text */
+}
+
+.register-link {
+  color: #74aae4; /* matches your existing primary link color */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.register-link:hover {
+  color: #0056b3; /* subtle hover effect */
+}
+
+
+/* ---------------- Game Page ---------------- */
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 15px;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.countdown {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+/* Container */
+.leaderboard-container {
+  text-align: center;
+  margin: 2rem auto;
+  color: #f1f5f9;
+  max-width: 500px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.leaderboard-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px #0f172a;
+}
+
+/* Table */
+.leaderboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  background-color: transparent;
+}
+
+/* Table Head */
+.leaderboard-table th {
+  font-size: 1.1rem;
+  background-color: #334155;
+  color: #f8fafc;
+  padding: 0.8rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Table Body */
+.leaderboard-table td {
+  padding: 0.7rem;
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  transition: transform 0.2s;
+}
+
+/* Row hover effect */
+.leaderboard-table tbody tr:hover td {
+  transform: scale(1.05);
+  background-color: #2f5080;
+}
+
+/* No players message */
+.no-players {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  color: #94a3b8;
+}
+
+/* ---------------- Mobile Responsive ---------------- */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #334155;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 10px;
+    padding: 1rem 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auth-container,
+  .home-container,
+  .game-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .number-grid {
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+  }
+
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  table th, table td {
+    padding: 0.5rem;
+  }
+}
