@@ -1,11 +1,12 @@
 
 # 🎮 Number Guessing Game Lobby
-![game area](https://github.com/user-attachments/assets/0838ab6d-41ca-4fb7-ad65-387fc8e2c6ec)
-![Leader Board](https://github.com/user-attachments/assets/2a58c7a1-59ba-434d-9b56-05cc29a9fa6b)
 
-https://github.com/user-attachments/assets/07e68b2e-7758-4b82-bfd7-43c5916031da
+<p>
+<img src="./frontend/game_lobby/public/game_area.jpg" width="200">
+<img src="./frontend/game_lobby/public/Leader_board.jpg" width="200">
+</p>
 
-
+<video src="https://github.com/user-attachments/assets/07e68b2e-7758-4b82-bfd7-43c5916031da" width="352" height="500"></video>
 
 A fun and interactive web-based game where users can join sessions, pick numbers, and compete to guess the winning number. Built with React.js frontend and Node.js/Express backend with MySQL database.  
 
