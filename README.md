@@ -6,14 +6,7 @@
 <img src="./frontend/game_lobby/public/Leader_board.jpg" width="200">
 </p>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-frontend\game_lobby\public\Game_Lobby.mp4
-=======
->>>>>>> 43d84533983c10d2aad6b8a82b71c6bc567c4994
-=======
 <video src="https://github.com/user-attachments/assets/07e68b2e-7758-4b82-bfd7-43c5916031da" width="352" height="500"></video>
->>>>>>> facdd177ce7d0b5bbf6b991c176116895d14736a
 
 A fun and interactive web-based game where users can join sessions, pick numbers, and compete to guess the winning number. Built with React.js frontend and Node.js/Express backend with MySQL database.  
 
