@@ -1,5 +1,7 @@
 
 # 🎮 Number Guessing Game Lobby
+![game area](https://github.com/user-attachments/assets/0838ab6d-41ca-4fb7-ad65-387fc8e2c6ec)
+![Leader Board](https://github.com/user-attachments/assets/2a58c7a1-59ba-434d-9b56-05cc29a9fa6b)
 
 https://github.com/user-attachments/assets/07e68b2e-7758-4b82-bfd7-43c5916031da
 
