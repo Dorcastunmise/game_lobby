@@ -1,10 +1,8 @@
 
 # 🎮 Number Guessing Game Lobby
 
-<p>
-<img src="./frontend/game_lobby/public/game_area.jpg" width="200">
-<img src="./frontend/game_lobby/public/Leader_board.jpg" width="200">
-</p>
+![game_area](https://github.com/user-attachments/assets/2b4a2ac0-c6e9-4420-b356-6cbff8d85717)
+![Leader_board](https://github.com/user-attachments/assets/99fbd34e-6b09-4847-8fbc-4c4586356f1d)
 
 <video src="https://github.com/user-attachments/assets/07e68b2e-7758-4b82-bfd7-43c5916031da" width="352" height="500"></video>
 
